@@ -18,10 +18,19 @@ $(function () {
   // Create loop to get all the time block ids, starting from 9
   // Compare the i with current hour
   for (let i = 9; i < 18; i++) {
+
     var timeBlock = $("#hour-" + i)
     if (i===currentHour) {
+
       timeBlock.addClass("present")
     }
+    else if (i<currentHour) {
+      timeBlock.addClass("past")
+    }
+    else {
+      timeBlock.addClass("future")
+    }
+    
   }
 
   // TODO: Add a listener for click events on the save button. This code should

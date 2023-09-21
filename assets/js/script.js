@@ -8,12 +8,20 @@ $(function () {
 
   console.log(currentDayTime)
 
+  currentDayEL.text(currentDayTime)
+
+  // Current hour is in military time
   var currentHour = dayjs().hour()
 
   console.log(currentHour)
 
+  // Create loop to get all the time block ids, starting from 9
+  // Compare the i with current hour
   for (let i = 9; i < 18; i++) {
-    
+    var timeBlock = $("#hour-" + i)
+    if (i===currentHour) {
+      timeBlock.addClass("present")
+    }
   }
 
   // TODO: Add a listener for click events on the save button. This code should

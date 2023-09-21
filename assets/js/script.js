@@ -4,6 +4,9 @@
 $(function () {
 
   var currentDayEL = $("#currentDay")
+  var currentDayTime = dayjs().format("dddd, MMMM D")
+
+  console.log(currentDayTime)
 
   var currentHour = dayjs().hour()
 

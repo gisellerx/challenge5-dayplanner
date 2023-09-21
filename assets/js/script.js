@@ -3,8 +3,13 @@
 // in the html.
 $(function () {
 
-  for (let i = 9; i < 17; i++) {
-    const element = array[i];
+  var currentDayEL = $("#currentDay")
+
+  var currentHour = dayjs().hour()
+
+  console.log(currentHour)
+
+  for (let i = 9; i < 18; i++) {
     
   }
 

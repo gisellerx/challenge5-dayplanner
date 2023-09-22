@@ -56,8 +56,12 @@ $(function () {
   function saveEvent(event) {
     var currentButton = $(event.target)
     var textArea = currentButton.siblings("textarea")
+    var parentId = currentButton.parent().attr("id")
 
-    alert(textArea.val())
+    alert(textArea.val() + " " + parentId)
+
+
+
   }
 
   saveBtn.on("click", saveEvent)

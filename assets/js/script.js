@@ -21,6 +21,10 @@ $(function () {
   for (let i = 9; i < 18; i++) {
 
     var timeBlock = $("#hour-" + i)
+    var event = localStorage.getItem("hour-" + i)
+
+    console.log(event)
+
     if (i===currentHour) {
 
       timeBlock.addClass("present")
@@ -58,9 +62,9 @@ $(function () {
     var textArea = currentButton.siblings("textarea")
     var parentId = currentButton.parent().attr("id")
 
-    alert(textArea.val() + " " + parentId)
+    alert(textArea.val() +" "+ parentId)
 
-
+    localStorage.setItem(parentId, textArea.val())
 
   }
 
